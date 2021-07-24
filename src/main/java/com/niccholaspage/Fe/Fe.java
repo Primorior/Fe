@@ -13,9 +13,6 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
-import org.mcstats.Metrics.Graph;
-import org.mcstats.Metrics.Plotter;
 
 public class Fe extends JavaPlugin
 {
@@ -50,7 +47,6 @@ public class Fe extends JavaPlugin
 		getCommand("fe").setExecutor(commands);
 		getServer().getPluginManager().registerEvents(listener, this);
 		setupVault();
-		loadMetrics();
 		// Load all accounts
 		database.loadAccounts();
 		// Autoclean on startup
@@ -157,7 +153,7 @@ public class Fe extends JavaPlugin
 			message += "=";
 		return message;
 	}
-	private void loadMetrics()
+/*	private void loadMetrics()
 	{
 		try
 		{
@@ -194,6 +190,6 @@ public class Fe extends JavaPlugin
 			});
 			metrics.start();
 		} catch(IOException e) {
-		}
-	}
+		}*/
+	} 
 }
