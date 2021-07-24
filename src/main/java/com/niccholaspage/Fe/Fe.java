@@ -153,43 +153,4 @@ public class Fe extends JavaPlugin
 			message += "=";
 		return message;
 	}
-/*	private void loadMetrics()
-	{
-		try
-		{
-			Metrics metrics = new Metrics(this);
-			final Graph databaseGraph = metrics.createGraph("Database Engine");
-			databaseGraph.addPlotter(new Plotter(getDB().getName())
-			{
-				@Override
-				public int getValue()
-				{
-					return 1;
-				}
-			});
-			final Graph defaultHoldings = metrics.createGraph("Default Holdings");
-			defaultHoldings.addPlotter(new Plotter(Double.toString(api.getDefaultHoldings()))
-			{
-				@Override
-				public int getValue()
-				{
-					return 1;
-				}
-			});
-			final Graph maxHoldings = metrics.createGraph("Max Holdings");
-			String maxHolding = Double.toString(api.getMaxHoldings());
-			if(api.getMaxHoldings() == -1)
-				maxHolding = "Unlimited";
-			maxHoldings.addPlotter(new Plotter(maxHolding)
-			{
-				@Override
-				public int getValue()
-				{
-					return 1;
-				}
-			});
-			metrics.start();
-		} catch(IOException e) {
-		}*/
-	} 
 }
